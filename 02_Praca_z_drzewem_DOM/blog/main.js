@@ -41,3 +41,5 @@ const menu = document.querySelector(".navigation-menu ul");
 menu.appendChild(newLi);
 
 document.querySelector(".about-me-title").remove();
+
+getBlog.style.color = red;
