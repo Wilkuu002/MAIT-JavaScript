@@ -1,10 +1,10 @@
 // //Zadanie 1
 //
-// const head = document.querySelector(".about-blog__content-title");
-// console.log(head);
+const head = document.querySelector(".about-blog__content-title");
+console.log(head);
 //
-// const navigatorLogo = document.querySelector(".navigation-menu img");
-// console.log(navigatorLogo);
+const navigatorLogo = document.querySelector(".navigation-menu img");
+console.log(navigatorLogo);
 //
 // const form = document.querySelector("form");
 // console.log(form);
