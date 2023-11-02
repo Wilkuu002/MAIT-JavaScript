@@ -5,6 +5,7 @@ const kontakt = document.querySelector('a[href="#contact"]');
 const linkMail = document.querySelector(
   'a[href="mailto:grzegorz@theadventurerblog.pl'
 );
+const Laos = document.querySelector(".first-article__text-title");
 
 getBlog.textContent = "dzien dobry";
 if (imgElement) {
@@ -42,4 +43,30 @@ menu.appendChild(newLi);
 
 document.querySelector(".about-me-title").remove();
 
-getBlog.style.color = red;
+Laos.style.color = "red";
+Laos.addEventListener("click", function () {
+  console.log(this);
+  console.log(this.type);
+});
+
+imgElement.addEventListener("click", function () {
+  console.log(this);
+  console.log(this.style);
+  if (this.style.borderColor === "") {
+    this.style.borderColor = "magenta";
+    this.style.borderWidth = "50px ";
+    this.style.borderStyle = "solid";
+    this.style.transition = "border-color 0.5s";
+    let rotation = 0;
+    const rotateInterval = setInterval(() => {
+      this.style.transform = `rotate(${rotation}deg)`;
+      rotation += 10; // Zwiększ kąt obrotu o 10 stopni za każdym razem
+      if (rotation >= 360) {
+        clearInterval(rotateInterval); // Zatrzymaj obracanie po pełnym obrocie
+      }
+    }, 100);
+  } else {
+    this.style.borderColor = "";
+    this.style.transform = "rotate(0deg)";
+  }
+});
