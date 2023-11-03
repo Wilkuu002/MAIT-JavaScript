@@ -41,3 +41,38 @@ const runInterval = (n = 8) => {
 // runInterval(3);
 
 runInterval();
+
+
+
+const generatelinks = (tab) => {
+
+    return tab.map((el) => 'https://${el}.com')
+
+}
+
+const addresses =["google", "twitter", "facebook"]
+
+const newUI = document.createElement("ul");
+newUL.setAtribute("id","menu")
+document.querySelector("body").append(newUI)
+const menu = document.querySelector("menu")
+
+generatelinks(arr).forEach(element => {
+    const newLi = document.createElement("Li")
+    newLi.textContent = el;
+    menu.append(newLi);
+    
+});
+
+const insertLinks = (arr, container )=>{
+    arr.forEach(element => {
+        const newLi = document.createElement("Li")
+        const newA = document.createElement("a")
+        newA.textContent = el;
+        newA.href= el;
+        newLI.append(newA)
+        container.append(newLi);
+    })       
+
+}
+insertLinks(generatelinks(addresses(arr)), menu)
