@@ -43,3 +43,20 @@ const stateCopy = {
 }
 
 console.log(stateCopy);
+
+
+//zadanie 1
+const tab1 = ["Zosia", "Marcin", "Kamil"]
+const tab2 = ["Ala", "Puszek",...tab1, "Zosia", "Marcin", "Kamil", "Jan", "Karol" ]
+
+//zadanie 2
+
+
+const s = {
+    invoiceSection: false,
+    availableYears: [1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005],
+    formStatus: "failed",
+    isUserLogged: false
+  };
+
+  const statecopy = {...s}
